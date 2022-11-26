@@ -1,33 +1,50 @@
-# Project
+# Synapse_AdventureWorks2019
+Synapse demo using AdventureWorks2019 data
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+In this repo we demonstrate some Azure Synapse Analytics functionality using AdventureWorks2019 Database data.
 
-As the maintainer of this project, please make a few updates:
+### Table of Contents
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+**[AdventureWorks2019 Database](#adventureworks2019-database)**<br>
+**[Download AdventureWorks sample database](#download-adventureworks-sample-database)**<br>
+**[Create Synapse Workspace](documentation/Create_Synapse_Workspace.md#create-synapse-workspace)**<br>
+**[Connect Synapse to GitHub](documentation/Create_Synapse_Workspace.md#connect-synapse-to-github)**<br>
+**[Ingest AdventureWorks2019 into Data Lake](documentation/Ingest_To_DataLake.md#ingest-adventureworks2019-into-data-lake)**<br>
+**[Create Synapse Notebook](documentation/Synapse_Notebook.md#create-synapse-notebook)**<br>
+**[Create a dedicated SQL pool](documentation/Ingest_To_DW.md#create-a-dedicated-sql-pool)**<br>
+**[Ingest Models into dedicated SQL pool](documentation/Ingest_To_DW.md#ingest-model-into-dedicated-sql-pool)**<br>
+**[Create PowerBI Report](documentation/PowerBI_Report.md#create-powerbi-report)**<br>
 
-## Contributing
+## AdventureWorks2019 Database
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+Let's start by creating a Database Server to host the AdventureWorks2019 database.
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
+Search for Azure SQL in the search box on the top of the Azure portal and let's create a new SQL server by clicking the Create button.
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+![Create SQL Database](./images/CreateSQLDatabase.png)
 
-## Trademarks
+On the SQL databases tile, in the Select SQL deployment options page, select Database server and click Create.
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
+![Create SQL Database](./images/CreateSQLDatabaseI.png)
+
+In the Create SQL Database Server page, select the Subscription and enter the Resource group (we recommend creating a new Resource group for this demo) enter the server's name.
+
+![Create SQL Database](./images/CreateSQLDatabaseII.png)
+
+Enter the authentication information and click the Review + create button.
+
+![Create SQL Database](./images/CreateSQLDatabaseIII.png)
+
+On the Review + create tab click the Create button.
+
+Wait until the deployment is completed and click Go to resource.
+
+![Create SQL Database](./images/CreateSQLDatabaseIV.png)
+
+## Download AdventureWorks sample database
+
+Go to https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver16&tabs=ssms
+
+Download AdventureWorks2019.bak file and follow the steps described in that document.
+
+Next: **[Create Synapse Workspace](documentation/Create_Synapse_Workspace.md#create-synapse-workspace)**<br>
